@@ -1,0 +1,872 @@
+<html><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Jorge Spinoza - Portfolio / Portafolio</title><meta name="data-notion-page-icon" content="🌐"/><link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20100%20100%22%3E%3Ctext%20y%3D%22.9em%22%20font-size%3D%2290%22%3E%F0%9F%8C%90%3C%2Ftext%3E%3C%2Fsvg%3E"/><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+/* Override strong tags inside headings to maintain consistent weight */
+h1 strong,
+h2 strong,
+h3 strong {
+	font-weight: 600;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 10px;
+	padding: 1rem;
+}
+
+/* For default-background callouts, render the border outline. */
+.callout.block-color-default_background {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+/*
+ * Toggles and callouts hold arbitrary content, so they can easily be taller
+ * than a page. They must stay breakable: avoiding breaks inside them makes
+ * Chromium push the whole block onto the next page, which leaves the previous
+ * page mostly empty before every long toggle.
+ */
+details,
+aside {
+	margin: 1.25em 0;
+}
+
+/* Keep a toggle's title on the same page as the start of its content. */
+summary {
+	page-break-after: avoid;
+	break-after: avoid;
+}
+
+/*
+ * Toggle headings render as <h1/h2/h3 style="display:inline-block"> inside
+ * <summary>. Without this reset, the heading's margin-top pushes it below the
+ * ::marker (▼), so the triangle and the title appear on separate lines.
+ */
+summary h1,
+summary h2,
+summary h3,
+summary h4 {
+	margin-top: 0;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+
+	table.collection-content {
+		width: 100%;
+		table-layout: fixed;
+	}
+
+	table.collection-content th,
+	table.collection-content td {
+		overflow-wrap: anywhere;
+	}
+
+	table.collection-content td > .user,
+	table.collection-content td > time {
+		white-space: pre-wrap;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content-wrapper {
+	overflow-x: auto;
+}
+
+@media only print {
+	.collection-content-wrapper {
+		overflow-x: visible;
+	}
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.collection-content td {
+	white-space: pre-wrap;
+	word-break: break-word;
+}
+
+.column-list {
+	display: flex;
+	gap: 46px;
+}
+
+.column {
+	min-width: 0;
+	overflow: hidden;
+}
+
+.column > *:first-child {
+	margin-top: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding-inline: 0.125rem;
+	padding-block: 0.375rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+table {
+	border-collapse: collapse;
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol.numbered-list.numbered-list-digits-2 {
+	padding-inline-start: 2em;
+}
+
+ol.numbered-list.numbered-list-digits-3plus {
+	padding-inline-start: 2.4em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+/*
+ * Render emoji icons using a ::before pseudo-element to keep the glyph
+ * out of the DOM textContent traversal. This avoids double-rendering icons
+ * in callouts and page titles.
+ * NOTE(slim/html-export-pseudo-icons): I can't tagref this because it will
+ * flag as a duplicate tag after codegen.
+ */
+.icon[data-emoji]::before {
+	content: attr(data-emoji);
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.callout img.notion-static-icon {
+	width: 1em;
+	height: 1em;
+}
+
+.callout p {
+	margin: 0;
+}
+
+.callout h1,
+.callout h2,
+.callout h3 {
+	margin: 0 0 0.6rem;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	margin-right: 0.4em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+blockquote.quote-large {
+	font-size: 1.25em;
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.tab {
+	margin: 1.25em 0;
+	padding-inline: 1rem;
+	border: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.highlight-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.highlight-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.highlight-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.highlight-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.highlight-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.highlight-default_background {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray_background {
+	background: rgba(42, 28, 0, 0.07);
+}
+.highlight-brown_background {
+	background: rgba(139, 46, 0, 0.086);
+}
+.highlight-orange_background {
+	background: rgba(224, 101, 1, 0.129);
+}
+.highlight-yellow_background {
+	background: rgba(211, 168, 0, 0.137);
+}
+.highlight-teal_background {
+	background: rgba(0, 100, 45, 0.09);
+}
+.highlight-blue_background {
+	background: rgba(0, 124, 215, 0.094);
+}
+.highlight-purple_background {
+	background: rgba(102, 0, 178, 0.078);
+}
+.highlight-pink_background {
+	background: rgba(197, 0, 93, 0.086);
+}
+.highlight-red_background {
+	background: rgba(223, 22, 0, 0.094);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.block-color-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.block-color-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.block-color-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.block-color-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.block-color-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(240, 239, 237, 1);
+}
+.block-color-brown_background {
+	background: rgba(245, 237, 233, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 235, 222, 1);
+}
+.block-color-yellow_background {
+	background: rgba(249, 243, 220, 1);
+}
+.block-color-teal_background {
+	background: rgba(232, 241, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(229, 242, 252, 1);
+}
+.block-color-purple_background {
+	background: rgba(243, 235, 249, 1);
+}
+.block-color-pink_background {
+	background: rgba(250, 233, 241, 1);
+}
+.block-color-red_background {
+	background: rgba(252, 233, 231, 1);
+}
+.select-value-color-default { background-color: rgba(42, 28, 0, 0.07); }
+.select-value-color-gray { background-color: rgba(28, 19, 1, 0.11); }
+.select-value-color-brown { background-color: rgba(127, 51, 0, 0.156); }
+.select-value-color-orange { background-color: rgba(196, 88, 0, 0.203); }
+.select-value-color-yellow { background-color: rgba(209, 156, 0, 0.282); }
+.select-value-color-green { background-color: rgba(0, 96, 38, 0.156); }
+.select-value-color-blue { background-color: rgba(0, 118, 217, 0.203); }
+.select-value-color-purple { background-color: rgba(92, 0, 163, 0.141); }
+.select-value-color-pink { background-color: rgba(183, 0, 78, 0.152); }
+.select-value-color-red { background-color: rgba(206, 24, 0, 0.164); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style><style>@import url('https://cdn.jsdelivr.net/npm/katex@0.16.25/dist/katex-swap.min.css')</style><body>
+<div class="lang-switcher">
+  <button id="btn-en" type="button" aria-pressed="true">EN</button>
+  <div class="track" id="track" role="switch" aria-checked="false" aria-label="Toggle language" tabindex="0">
+    <div class="knob"></div>
+  </div>
+  <button id="btn-es" type="button" aria-pressed="false">ES</button>
+</div>
+<article id="3ceaf9de-19e7-8007-8687-d6a5dc1cc3e3" class="page sans" data-notion-page-icon="🌐">
+
+<div class="lang-block is-active" data-lang="en">
+<header><img class="page-cover-image" src="CJS-CUN-24.png" style="object-position:center 92.75%"/><div class="page-header-icon page-header-icon-with-cover"><span class="icon" data-emoji="🌐"></span></div><h1 class="page-title" dir="auto">Jorge Spinoza - Portfolio</h1><p class="page-description" dir="auto"></p></header>
+<div class="page-body"><p id="3ceaf9de-19e7-8037-b178-dbafbaa34ea8-en" class="" dir="auto">
+</p><figure id="3ceaf9de-19e7-8012-8e04-e3eeb509a396-en" class="image" data-notion-image="upscaled_(1).png" dir="ltr"><a href="upscaled_(1).png"><img style="width:912px" src="upscaled_(1).png"/></a></figure><h3 id="3ceaf9de-19e7-80f0-8160-c4819bd9885a-en" class="" dir="auto"><strong>I turn language into a business tool.</strong></h3><p id="3ceaf9de-19e7-8086-a54e-c591a4a36795-en" class="" dir="auto">I combine a background in linguistics and editorial experience with digital commerce and applied artificial intelligence — <em>i.e. </em>prompt engineering, conversational systems, and human-in-the-loop models — to create content, scripts, and communication strategies that don't just read well, but deliver results: more sales, more clarity, more connection with the right people.</p><p id="3ceaf9de-19e7-8011-bcc4-e149948376a3-en" class="" dir="auto">I create videos, content, and design.</p><p id="3ceaf9de-19e7-8043-b11f-fc8d3caf65b7-en" class="" dir="auto">My career connects three worlds that are normally kept apart:</p><p id="3ceaf9de-19e7-8081-816f-d6a31bea8582-en" class="" dir="auto"><strong>Editorial</strong> — As digital editor at <em>diario.mx</em>, I learned to think about real audiences: which stories matter, how to tell them, and what keeps someone reading to the end.</p><p id="3ceaf9de-19e7-80ca-a855-db165b0ea2ef-en" class="" dir="auto"><strong>Commercial</strong> — At Taco H I didn't just answer WhatsApp messages: I built a digital sales unit from the ground up, turning conversation into conversion and proving that well-applied language sells too.</p><p id="3ceaf9de-19e7-80bd-a819-ceaf80e63be6-en" class="" dir="auto"><strong>Strategic</strong> — At IRTCáncer, as a public relations and communications assistant, I was in charge of marketing content, closing the loop between institutional narrative, reputation, and measurable results.</p><hr id="3ceaf9de-19e7-80a7-b1a5-f7ce137e6785-en" dir="auto"/><p id="3ceaf9de-19e7-808a-9948-e9bf507cf70a-en" class="" dir="auto">
+</p><h1 id="3ceaf9de-19e7-8056-a577-e1c34498e347-en" class="" dir="auto">💼 Projects</h1><hr id="3ceaf9de-19e7-80f2-9e36-db2d2dae2ab6-en" dir="auto"/><p id="3ceaf9de-19e7-808c-83cf-c47df1ba57ee-en" class="" dir="auto">
+</p><h2 id="3ceaf9de-19e7-804b-8230-ef2bffb03811-en" class="" dir="auto">– Diario.mx –</h2><figure id="3ceaf9de-19e7-802c-b027-c1f43a6a19d3-en" class="image" data-notion-image="diario002.jpg" dir="ltr"><a href="diario002.jpg"><img style="width:768px" src="diario002.jpg"/></a></figure><p id="3ceaf9de-19e7-80a1-89d9-d37fda32baf4-en" class="" dir="auto">During this period, I helped drive the growth of <a href="http://diario.mx">diario.mx</a>'s digital audience from 250,000 to 500,000 followers between 2014 and 2018, doubling reach through a planned strategy and content experimentation, while also directing front-page editorial decisions for the region's leading news outlet, setting the daily community agenda and defining visual and narrative hierarchy across digital formats; this work also included managing brand reputation during high-volatility news cycles, sustaining audience trust through sensitive moments, and coordinating international content flows under The New York Times editorial standards, ensuring cross-cultural accuracy and professional publishing quality.</p><figure id="3ceaf9de-19e7-80cd-af3d-de59c0d846b8-en" class="image" data-notion-image="image.png" dir="ltr"><a href="image.png"><img style="width:703.96875px" src="image.png"/></a></figure><p id="3ceaf9de-19e7-803b-aea8-d4b444042620-en" class="" dir="auto">A small sample of my viral stories (which I bylined back in the 2010s, when that was still unusual) can be found <strong><a href="https://gluc.mx/buscar?q=%22Jorge%20Spinoza">on the gluc.mx portal</a></strong>.</p><p id="3ceaf9de-19e7-8019-bc70-c4bef6ff2400-en" class="" dir="auto">
+</p><p id="3ceaf9de-19e7-805a-90e9-e256cc032d51-en" class="" dir="auto">
+</p><h2 id="3ceaf9de-19e7-80f6-9dd4-d9bb1d8ebcd2-en" class="" dir="auto">– Taco H –</h2><figure id="3ceaf9de-19e7-805a-bd76-d921c9cc1e54-en" class="image" data-notion-image="tacoh002.jpg" dir="ltr"><a href="tacoh002.jpg"><img style="width:768px" src="tacoh002.jpg"/></a></figure><p id="3ceaf9de-19e7-8065-abda-dc12e4e2d4d6-en" class="" dir="auto">In this role, I built a WhatsApp sales channel from scratch — unprecedented at the company — which came to represent 30% of total weekly revenue ($350,000 MXN) and became a stable source of digital income; at the same time, I designed and implemented a full omnichannel operations architecture across 3 branches, integrating orders, logistics, and deliveries into a single coordinated system with 100% process accuracy, while supervising sales, logistics, and delivery teams operating simultaneously across different locations on $350,000 MXN in weekly revenue, and restructured the customer journey through behavioral data analysis, reducing conversion friction and measurably increasing repeat purchases.</p><figure id="3ceaf9de-19e7-8002-b524-e311b95b7be8-en" class="image" data-notion-image="tacohx003.jpg" dir="ltr"><a href="tacohx003.jpg"><img style="width:703.96875px" src="tacohx003.jpg"/></a></figure><p id="3ceaf9de-19e7-8073-a472-ef9655a442e9-en" class="" dir="auto">
+</p><p id="3ceaf9de-19e7-8049-b841-eebf4e03cdb7-en" class="" dir="auto">
+</p><h2 id="3ceaf9de-19e7-8005-8812-c2cef5a41372-en" class="" dir="auto">– Instituto Regional de Tratamiento de Cáncer –</h2><figure id="3ceaf9de-19e7-8087-a0fa-d3dca2b4b8ec-en" class="image" data-notion-image="irtc002.jpg" dir="ltr"><a href="irtc002.jpg"><img style="width:768px" src="irtc002.jpg"/></a></figure><p id="3ceaf9de-19e7-803e-8a0e-e4f532b87283-en" class="" dir="auto">For this project, I designed authority-positioning strategies for healthcare professionals aimed at driving patient acquisition and increasing private-practice revenue through systematic branding and prospecting frameworks; this work was built on a referral network and partnerships with medical specialists and health clusters along the US-Mexico border, structuring agreements and defining the value exchange between providers, as well as managing a $250,000 MXN budget for the execution of the 25th anniversary ceremony, optimizing spending line items and negotiating with vendors without compromising event quality, and overseeing and approving marketing copy and communication pieces, ensuring message consistency and brand alignment across all campaigns.</p><div id="3ceaf9de-19e7-80d8-8cdb-f3652ad22ec6-en" class="column-list" data-notion-column-list="" dir="auto"><div id="3ceaf9de-19e7-808e-8104-eec18d2209fa-en" style="width:50%" class="column" data-notion-column-ratio="0.5" dir="auto"><figure id="3ceaf9de-19e7-80ef-be0f-f929c82a657b-en" class="image" style="text-align:left" data-notion-image="image%201.png" dir="ltr"><a href="image%201.png"><img style="width:288px" src="image%201.png"/></a></figure></div><div id="3ceaf9de-19e7-80c4-a90a-ef2e2dcbc8e3-en" style="width:50.000000000000014%" class="column" data-notion-column-ratio="0.5000000000000001" dir="auto"><ul id="3ceaf9de-19e7-803c-812f-dce9cf07c91c-en" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><a href="https://www.irtcancer.com/post/taller-de-turbantes-cancer-survivor-irtc%C3%A1ncer">Taller de turbantes – Cancer Survivor IRTCáncer</a><p id="3ceaf9de-19e7-8023-862f-ebce089e2874-en" class="" dir="auto">About a turban workshop for oncology patients, run in partnership with Cancer Survivor.</p></li></ul></div></div><div id="3ceaf9de-19e7-80fb-b22a-eb48b8a7c73c-en" class="column-list" data-notion-column-list="" dir="auto"><div id="3ceaf9de-19e7-8054-90c9-eaf73598eda3-en" style="width:50%" class="column" data-notion-column-ratio="0.5" dir="auto"><figure id="3ceaf9de-19e7-8074-b8ba-c88619858039-en" class="image" style="text-align:left" data-notion-image="image%202.png" dir="ltr"><a href="image%202.png"><img style="width:288px" src="image%202.png"/></a></figure></div><div id="3ceaf9de-19e7-8073-9f13-c61784768fde-en" style="width:50%" class="column" data-notion-column-ratio="0.5" dir="auto"><ul id="3ceaf9de-19e7-80a6-ac3d-dc75b3858357-en" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><a href="https://www.irtcancer.com/post/un-hito-en-la-salud-regional-recordando-el-inicio-del-irtc%C3%A1ncer">Un hito en la salud regional: recordando el inicio del IRTCáncer</a><p id="3ceaf9de-19e7-8037-8f47-dd3fe4714925-en" class="" dir="auto">About the Institute's cornerstone-laying ceremony, using historical photographic material.</p></li></ul></div></div><div id="3ceaf9de-19e7-8071-b2b6-ebedefae0123-en" class="column-list" data-notion-column-list="" dir="auto"><div id="3ceaf9de-19e7-80e8-b3ca-d0355a0411e2-en" style="width:50%" class="column" data-notion-column-ratio="0.5" dir="auto"><figure id="3ceaf9de-19e7-8050-9907-fdaeb993d91d-en" class="image" style="text-align:left" data-notion-image="image%203.png" dir="ltr"><a href="image%203.png"><img style="width:336px" src="image%203.png"/></a></figure></div><div id="3ceaf9de-19e7-80de-a192-ccfab5cf1d8b-en" style="width:50%" class="column" data-notion-column-ratio="0.5" dir="auto"><ul id="3ceaf9de-19e7-802f-99b8-c4e63a353054-en" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><a href="https://www.irtcancer.com/post/25-a%C3%B1os-el-inicio-del-irtc%C3%A1ncer-dr-emilio-torres-medina-1934-2022">25 años – El inicio del IRTCáncer: Dr. Emilio Torres Medina (1934–2022)</a><p id="3ceaf9de-19e7-80c2-929f-d4d355e680e0-en" class="" dir="auto">About the life of Dr. Emilio Torres Medina, a pioneering radiation oncologist in Ciudad Juárez.</p><p id="3ceaf9de-19e7-8075-817c-f9654ba1c4db-en" class="" dir="auto">
+</p></li></ul></div></div><hr id="3ceaf9de-19e7-8069-b635-e61a32a782a8-en" dir="auto"/><h3 id="3ceaf9de-19e7-8028-bdf9-fa6e4ba7cfa3-en" class="" dir="auto">🎬 Video samples</h3><p id="3ceaf9de-19e7-80c9-ac4a-f02578de7963-en" class="" dir="auto"><strong>Dr. Naranjo — Video with very good production</strong></p><figure id="3ceaf9de-19e7-803e-8191-d3250e2af0dd-en" dir="ltr"><div class="source"><a href="https://www.facebook.com/reel/1372104421271725">https://www.facebook.com/reel/1372104421271725</a></div><figcaption>Dr. Naranjo. Video with very good production.</figcaption></figure><p id="3ceaf9de-19e7-80c6-9936-dbfa43aa2ef8-en" class="" dir="auto">
+</p><p id="3ceaf9de-19e7-8054-89ca-f6977d77d9ad-en" class="" dir="auto"><strong>Kaleb case (child patient) — The interesting part is the shots in the first minute</strong></p><figure id="3ceaf9de-19e7-808f-9fcf-c8a3e3f04e3b-en" dir="ltr"><div class="source"><a href="https://www.facebook.com/reel/871581022028885">https://www.facebook.com/reel/871581022028885</a></div><figcaption>Kaleb case. The interesting part is the shots in the first minute.</figcaption></figure><p id="3ceaf9de-19e7-802a-904b-d330e720356c-en" class="" dir="auto"><strong>Dr. Carrera — Casual, relaxed composition in the office</strong></p><figure id="3ceaf9de-19e7-8049-8521-c114700bbc96-en" dir="ltr"><div class="source"><a href="https://www.facebook.com/reel/945014958129916">https://www.facebook.com/reel/945014958129916</a></div></figure><p id="3ceaf9de-19e7-80d7-8fdf-f2f8609f87e8-en" class="" dir="auto"><a href="https://www.facebook.com/reel/945014958129916">https://www.facebook.com/reel/945014958129916</a><br/>The image composition inside his office is very casual and relaxed.</p><p id="3ceaf9de-19e7-800e-b124-ecd6ee7a852b-en" class="" dir="auto"><strong>Dr. Naranjo — Shot handling</strong></p><figure id="3ceaf9de-19e7-8029-9152-d5a1a47eb9c5-en" dir="ltr"><div class="source"><a href="https://www.facebook.com/reel/1836270720328406">https://www.facebook.com/reel/1836270720328406</a></div></figure><p id="3ceaf9de-19e7-80c5-a3a5-c6d8d0097cf1-en" class="" dir="auto">Dr. Naranjo. Note the shot handling.</p><hr id="3ceaf9de-19e7-80b2-ad42-ee659cb182ce-en" dir="auto"/><h1 id="3ceaf9de-19e7-8032-aa8c-c3331db8783b-en" class="" dir="auto">City Chronicler (Juárez, Mexico)</h1><figure id="3ceaf9de-19e7-8028-9754-ef4e84ca5350-en" class="image" data-notion-image="cronista-borunda4-1024x654.png" dir="ltr"><a href="cronista-borunda4-1024x654.png"><img style="width:768px" src="cronista-borunda4-1024x654.png"/></a></figure><p id="3ceaf9de-19e7-8012-bdd3-cf90f6ce58fc-en" class="" dir="auto">In the proposal submitted in 2025 to the <strong><a href="https://www.juarez.gob.mx/noticia/27616/regidores-seleccionan-la-terna-para-elegir-al-cronista-de-la-ciudad">Ciudad Juárez City Council</a></strong> for the position of City Chronicler, I brought together — in a way unconventional for the role — three areas usually handled separately in local heritage management: archival preservation, a gender perspective, and the incorporation of contemporary technological tools. Yes, artificial intelligence. </p><div id="3ceaf9de-19e7-803d-be47-e817aea5b3b5-en" class="column-list" data-notion-column-list="" dir="auto"><div id="3ceaf9de-19e7-8087-ac07-e836e30402ab-en" style="width:50%" class="column" data-notion-column-ratio="0.5" dir="auto"><figure id="3ceaf9de-19e7-80a5-92fc-ca7b98d35f2f-en" class="image" style="text-align:left" data-notion-image="cronista-borunda3-1024x682.png" dir="ltr"><a href="cronista-borunda3-1024x682.png"><img style="width:336px" src="cronista-borunda3-1024x682.png"/></a></figure></div><div id="3ceaf9de-19e7-8005-a3b0-dfa67534ffe2-en" style="width:50%" class="column" data-notion-column-ratio="0.5" dir="auto"><figure id="3ceaf9de-19e7-8060-8c36-ea128e748de7-en" class="image" data-notion-image="cronista-borunda5-1024x682.png" dir="ltr"><a href="cronista-borunda5-1024x682.png"><img style="width:288px" src="cronista-borunda5-1024x682.png"/></a></figure></div></div><p id="3ceaf9de-19e7-8062-8e64-fc90477da292-en" class="" dir="auto">Unlike the traditional view of the chronicler as a mere recorder of historical dates, my project proposed an active figure who intervenes in the construction of institutional memory — particularly by systematically integrating women's stories, from maquiladora workers to activists and academics, into an official narrative that has historically sidelined them.</p><p id="3ceaf9de-19e7-8093-91fb-ea1092374bfb-en" class="" dir="auto">The proposal explicitly limited the use of artificial intelligence to technical support tasks (transcription, cataloguing, discourse-pattern analysis), reserving interpretation and narrative sensibility for human judgment — a deliberate safeguard against the automation risks that other cultural projects tend to overlook.</p><p id="3ceaf9de-19e7-8063-8cd3-c5fcabd0b5f7-en" class="" dir="auto">
+</p><h3 id="3ceaf9de-19e7-801d-8fe7-ffe3e132bbce-en" class="" dir="auto">🛠️ SKILLS</h3><ul id="3ceaf9de-19e7-80dc-9cea-ff69103041ad-en" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>Languages: </strong>Spanish (Native) | English C1 (Professional Fluency).<br/></li></ul><ul id="3ceaf9de-19e7-80bc-92f3-d21440b0ba00-en" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>Marketing and Operations: </strong>Meta Business Suite, LinkedIn B2B, Google<br/>Analytics, Email Marketing (Newsletters), Surveys and Forms (Google<br/>Forms/Typeform).<br/></li></ul><ul id="3ceaf9de-19e7-8038-8d4f-de9af9820d2b-en" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>Design and Editing: </strong>Adobe Photoshop, Adobe Lightroom, Photopea, CapCut,<br/>Clipchamp.<br/></li></ul><ul id="3ceaf9de-19e7-80d6-958b-f4cc7af73834-en" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>Systems and Platforms: </strong>Microsoft Office, CMS (Drupal, WordPress), CRM Systems<br/>(Zoho, Salesforce, WhatsHash), logistics and delivery operations platforms (Tookan).<br/></li></ul><ul id="3ceaf9de-19e7-804f-a2c4-d8795e1e73f8-en" class="bulleted-list" dir="auto"><li style="list-style-type:disc">AI-assisted workflows (Claude, ChatGPT, Gemini, Higgsfield, etc.)</li></ul><hr id="3ceaf9de-19e7-80a1-bed1-c0f1578500f5-en" dir="auto"/><h3 id="3ceaf9de-19e7-80dd-a6b7-e875b84362f8-en" class="" dir="auto">🎓 EDUCATION</h3><ul id="3ceaf9de-19e7-80eb-8a74-ecab40055b16-en" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Master's degree (incomplete) in Latin American Studies from New Mexico State<br/>University (NMSU).<br/></li></ul><ul id="3ceaf9de-19e7-80e3-a39c-ce76b885cf0b-en" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Bachelor's degree in Linguistics and Hispanic Literature from the Universidad Autónoma de<br/>Ciudad Juárez (UACJ).</li></ul><hr id="3ceaf9de-19e7-8025-b4c4-d34b6fc2e012-en" dir="auto"/><h3 id="3ceaf9de-19e7-80ab-be7b-f7e2a08bf199-en" class="" dir="auto">📬 CONTACT</h3><ul id="3ceaf9de-19e7-8031-a162-fb22f6e344b5-en" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Mobile: <a href="http://wa.me/+526566365827">+52 656 636 5827</a> (Link opens in WhatsApp)</li></ul><ul id="3ceaf9de-19e7-801d-9a73-c9d5966c110a-en" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>Email:</strong> <a href="mailto:jcruzes@live.com">jcruzes@live.com</a></li></ul><ul id="3ceaf9de-19e7-80a8-b34c-cc4071023feb-en" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>LinkedIn:</strong> <a href="https://linkedin.com">Jorge Spinoza</a></li></ul><ul id="3ceaf9de-19e7-803f-96cc-ec3c000123e6-en" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Professional license number (Bachelor's degree): <a href="https://latamverify.com/profile/mx/pro/jorge-arturo-cruz-espinoza-3568958.html">6425611</a></li></ul><hr id="3ceaf9de-19e7-804d-96a8-c4a501646d20-en" dir="auto"/><p id="3ceaf9de-19e7-800c-9134-fc1f928f7b2e-en" class="" dir="auto">
+</p><p id="3ceaf9de-19e7-803e-8990-d2c390e45022-en" class="" dir="auto"><em>Made with Notion</em></p><p id="3ceaf9de-19e7-8018-bec2-c5cd5510c3cd-en" class="" dir="auto">
+</p></div>
+</div>
+
+<div class="lang-block" data-lang="es">
+<header><img class="page-cover-image" src="CJS-CUN-24.png" style="object-position:center 92.75%"/><div class="page-header-icon page-header-icon-with-cover"><span class="icon" data-emoji="🌐"></span></div><h1 class="page-title" dir="auto">Jorge Spinoza - Portafolio</h1><p class="page-description" dir="auto"></p></header>
+<div class="page-body"><p id="3ceaf9de-19e7-8037-b178-dbafbaa34ea8-es" class="" dir="auto">
+</p><figure id="3ceaf9de-19e7-8012-8e04-e3eeb509a396-es" class="image" data-notion-image="upscaled_(1).png" dir="ltr"><a href="upscaled_(1).png"><img style="width:912px" src="upscaled_(1).png"/></a></figure><h3 id="3ceaf9de-19e7-80f0-8160-c4819bd9885a-es" class="" dir="auto"><strong>Transformo el lenguaje en una herramienta de negocio.</strong></h3><p id="3ceaf9de-19e7-8086-a54e-c591a4a36795-es" class="" dir="auto">Combino formación en lingüística y experiencia editorial con comercio digital e inteligencia artificial aplicada, <em>i.e. </em>prompt engineering, sistemas conversacionales y modelos human-in-the-loop para crear contenido, guiones y estrategias de comunicación que no solo se leen bien, sino que generan resultados: más ventas, más claridad, más conexión con las personas correctas.</p><p id="3ceaf9de-19e7-8011-bcc4-e149948376a3-es" class="" dir="auto">Creo videos, contenidos y diseño.</p><p id="3ceaf9de-19e7-8043-b11f-fc8d3caf65b7-es" class="" dir="auto">Mi trayectoria conecta tres mundos que normalmente están separados:</p><p id="3ceaf9de-19e7-8081-816f-d6a31bea8582-es" class="" dir="auto"><strong>Editorial</strong> — Como editor digital en <em>diario.mx</em>, aprendí a pensar en audiencias reales: qué historias importan, cómo se cuentan y qué hace que alguien se quede leyendo hasta el final.</p><p id="3ceaf9de-19e7-80ca-a855-db165b0ea2ef-es" class="" dir="auto"><strong>Comercial</strong> — En Taco H no me limité a responder WhatsApp: construí desde cero una unidad de negocio de ventas digitales, traduciendo conversación en conversión y demostrando que el lenguaje bien aplicado también vende.</p><p id="3ceaf9de-19e7-80bd-a819-ceaf80e63be6-es" class="" dir="auto"><strong>Estratégico</strong> — En IRTCáncer, como asistente de relaciones públicas y comunicación, estuve a cargo de los contenidos de marketing, cerrando el círculo entre narrativa institucional, reputación y resultados medibles.</p><hr id="3ceaf9de-19e7-80a7-b1a5-f7ce137e6785-es" dir="auto"/><p id="3ceaf9de-19e7-808a-9948-e9bf507cf70a-es" class="" dir="auto">
+</p><h1 id="3ceaf9de-19e7-8056-a577-e1c34498e347-es" class="" dir="auto">💼 Proyectos</h1><hr id="3ceaf9de-19e7-80f2-9e36-db2d2dae2ab6-es" dir="auto"/><p id="3ceaf9de-19e7-808c-83cf-c47df1ba57ee-es" class="" dir="auto">
+</p><h2 id="3ceaf9de-19e7-804b-8230-ef2bffb03811-es" class="" dir="auto">– Diario.mx –</h2><figure id="3ceaf9de-19e7-802c-b027-c1f43a6a19d3-es" class="image" data-notion-image="diario002.jpg" dir="ltr"><a href="diario002.jpg"><img style="width:768px" src="diario002.jpg"/></a></figure><p id="3ceaf9de-19e7-80a1-89d9-d37fda32baf4-es" class="" dir="auto">Durante este periodo, fui copartícipe en el crecimiento de la audiencia digital de <a href="http://diario.mx">diario.mx</a> al pasar de 250,000 a 500,000 seguidores entre 2014 y 2018, duplicando el alcance mediante una estrategia planificada y experimentación de contenidos, al tiempo que dirigía las decisiones editoriales de primera plana para el medio de comunicación líder en la región, estableciendo la agenda comunitaria diaria y definiendo la jerarquía visual y narrativa en formatos digitales; esta labor incluyó también la gestión de la reputación de marca durante ciclos informativos de alta volatilidad, sosteniendo la confianza de la audiencia en coyunturas sensibles, y la coordinación de flujos de contenido internacional bajo los estándares editoriales de The New York Times, garantizando precisión intercultural y calidad de publicación profesional.</p><figure id="3ceaf9de-19e7-80cd-af3d-de59c0d846b8-es" class="image" data-notion-image="image.png" dir="ltr"><a href="image.png"><img style="width:703.96875px" src="image.png"/></a></figure><p id="3ceaf9de-19e7-803b-aea8-d4b444042620-es" class="" dir="auto">Una pequeña muestra de mis notas virales (que yo las firmaba en los 2010s cuando era poco común) se encuentra <strong><a href="https://gluc.mx/buscar?q=%22Jorge%20Spinoza">en el portal gluc.mx</a></strong>.</p><p id="3ceaf9de-19e7-8019-bc70-c4bef6ff2400-es" class="" dir="auto">
+</p><p id="3ceaf9de-19e7-805a-90e9-e256cc032d51-es" class="" dir="auto">
+</p><h2 id="3ceaf9de-19e7-80f6-9dd4-d9bb1d8ebcd2-es" class="" dir="auto">– Taco H –</h2><figure id="3ceaf9de-19e7-805a-bd76-d921c9cc1e54-es" class="image" data-notion-image="tacoh002.jpg" dir="ltr"><a href="tacoh002.jpg"><img style="width:768px" src="tacoh002.jpg"/></a></figure><p id="3ceaf9de-19e7-8065-abda-dc12e4e2d4d6-es" class="" dir="auto">En esta experiencia, se creó desde cero un canal de ventas por WhatsApp, sin precedente en la empresa, que llegó a representar el 30% de los ingresos semanales totales ($350,000 MXN) y se consolidó como una fuente estable de ingresos digitales; en paralelo, diseñé e implementé una arquitectura integral de operaciones omnicanal en 3 sucursales, integrando pedidos, logística y entregas en un solo sistema coordinado con 100% de precisión en los procesos, mientras supervisaba equipos de ventas, logística y entregas operando simultáneamente en distintas ubicaciones sobre ingresos semanales de $350,000 MXN, y reestructuraba la ruta del cliente (customer journey) mediante el análisis de datos de comportamiento, reduciendo la fricción en la conversión e incrementando de forma medible las compras recurrentes.</p><figure id="3ceaf9de-19e7-8002-b524-e311b95b7be8-es" class="image" data-notion-image="tacohx003.jpg" dir="ltr"><a href="tacohx003.jpg"><img style="width:703.96875px" src="tacohx003.jpg"/></a></figure><p id="3ceaf9de-19e7-8073-a472-ef9655a442e9-es" class="" dir="auto">
+</p><p id="3ceaf9de-19e7-8049-b841-eebf4e03cdb7-es" class="" dir="auto">
+</p><h2 id="3ceaf9de-19e7-8005-8812-c2cef5a41372-es" class="" dir="auto">– Instituto Regional de Tratamiento de Cáncer –</h2><figure id="3ceaf9de-19e7-8087-a0fa-d3dca2b4b8ec-es" class="image" data-notion-image="irtc002.jpg" dir="ltr"><a href="irtc002.jpg"><img style="width:768px" src="irtc002.jpg"/></a></figure><p id="3ceaf9de-19e7-803e-8a0e-e4f532b87283-es" class="" dir="auto">Para este proyecto, diseñé estrategias de posicionamiento de autoridad para profesionales de la salud, orientadas a impulsar la adquisición de pacientes e incrementar los ingresos de la práctica privada mediante marcos sistemáticos de marca y prospección; esta labor se apoyó en la arquitectura de una red de referencias y alianzas con especialistas médicos y clústeres de salud en la frontera EE. UU.-México, estructurando acuerdos y definiendo el intercambio de valor entre proveedores, además de la administración de un presupuesto de $250,000 MXN para la ejecución de la ceremonia del 25 aniversario, optimizando partidas de gasto y negociando con proveedores sin comprometer la calidad del evento, y de la supervisión y aprobación de los copies y piezas de comunicación del área de mercadotecnia, garantizando coherencia de mensaje y alineación de marca en todas las campañas.</p><div id="3ceaf9de-19e7-80d8-8cdb-f3652ad22ec6-es" class="column-list" data-notion-column-list="" dir="auto"><div id="3ceaf9de-19e7-808e-8104-eec18d2209fa-es" style="width:50%" class="column" data-notion-column-ratio="0.5" dir="auto"><figure id="3ceaf9de-19e7-80ef-be0f-f929c82a657b-es" class="image" style="text-align:left" data-notion-image="image%201.png" dir="ltr"><a href="image%201.png"><img style="width:288px" src="image%201.png"/></a></figure></div><div id="3ceaf9de-19e7-80c4-a90a-ef2e2dcbc8e3-es" style="width:50.000000000000014%" class="column" data-notion-column-ratio="0.5000000000000001" dir="auto"><ul id="3ceaf9de-19e7-803c-812f-dce9cf07c91c-es" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><a href="https://www.irtcancer.com/post/taller-de-turbantes-cancer-survivor-irtc%C3%A1ncer">Taller de turbantes – Cancer Survivor IRTCáncer</a><p id="3ceaf9de-19e7-8023-862f-ebce089e2874-es" class="" dir="auto">Sobre un taller de turbantes para pacientes con diagnóstico oncológico, gestionado con Cancer Survivor.</p></li></ul></div></div><div id="3ceaf9de-19e7-80fb-b22a-eb48b8a7c73c-es" class="column-list" data-notion-column-list="" dir="auto"><div id="3ceaf9de-19e7-8054-90c9-eaf73598eda3-es" style="width:50%" class="column" data-notion-column-ratio="0.5" dir="auto"><figure id="3ceaf9de-19e7-8074-b8ba-c88619858039-es" class="image" style="text-align:left" data-notion-image="image%202.png" dir="ltr"><a href="image%202.png"><img style="width:288px" src="image%202.png"/></a></figure></div><div id="3ceaf9de-19e7-8073-9f13-c61784768fde-es" style="width:50%" class="column" data-notion-column-ratio="0.5" dir="auto"><ul id="3ceaf9de-19e7-80a6-ac3d-dc75b3858357-es" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><a href="https://www.irtcancer.com/post/un-hito-en-la-salud-regional-recordando-el-inicio-del-irtc%C3%A1ncer">Un hito en la salud regional: recordando el inicio del IRTCáncer</a><p id="3ceaf9de-19e7-8037-8f47-dd3fe4714925-es" class="" dir="auto">Sobre la ceremonia de colocación de primera piedra del Instituto, utilizando material fotográfico histórico.</p></li></ul></div></div><div id="3ceaf9de-19e7-8071-b2b6-ebedefae0123-es" class="column-list" data-notion-column-list="" dir="auto"><div id="3ceaf9de-19e7-80e8-b3ca-d0355a0411e2-es" style="width:50%" class="column" data-notion-column-ratio="0.5" dir="auto"><figure id="3ceaf9de-19e7-8050-9907-fdaeb993d91d-es" class="image" style="text-align:left" data-notion-image="image%203.png" dir="ltr"><a href="image%203.png"><img style="width:336px" src="image%203.png"/></a></figure></div><div id="3ceaf9de-19e7-80de-a192-ccfab5cf1d8b-es" style="width:50%" class="column" data-notion-column-ratio="0.5" dir="auto"><ul id="3ceaf9de-19e7-802f-99b8-c4e63a353054-es" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><a href="https://www.irtcancer.com/post/25-a%C3%B1os-el-inicio-del-irtc%C3%A1ncer-dr-emilio-torres-medina-1934-2022">25 años – El inicio del IRTCáncer: Dr. Emilio Torres Medina (1934–2022)</a><p id="3ceaf9de-19e7-80c2-929f-d4d355e680e0-es" class="" dir="auto">Sobre la vida del Dr. Emilio Torres Medina, radiooncólogo pionero en Ciudad Juárez.</p><p id="3ceaf9de-19e7-8075-817c-f9654ba1c4db-es" class="" dir="auto">
+</p></li></ul></div></div><hr id="3ceaf9de-19e7-8069-b635-e61a32a782a8-es" dir="auto"/><h3 id="3ceaf9de-19e7-8028-bdf9-fa6e4ba7cfa3-es" class="" dir="auto">🎬 Muestras de videos</h3><p id="3ceaf9de-19e7-80c9-ac4a-f02578de7963-es" class="" dir="auto"><strong>Dr. Naranjo — Video con muy buena producción</strong></p><figure id="3ceaf9de-19e7-803e-8191-d3250e2af0dd-es" dir="ltr"><div class="source"><a href="https://www.facebook.com/reel/1372104421271725">https://www.facebook.com/reel/1372104421271725</a></div><figcaption>Dr. Naranjo. Video con muy buena producción</figcaption></figure><p id="3ceaf9de-19e7-80c6-9936-dbfa43aa2ef8-es" class="" dir="auto">
+</p><p id="3ceaf9de-19e7-8054-89ca-f6977d77d9ad-es" class="" dir="auto"><strong>Caso niño Kaleb — Lo interesante son los planos del primer minuto</strong></p><figure id="3ceaf9de-19e7-808f-9fcf-c8a3e3f04e3b-es" dir="ltr"><div class="source"><a href="https://www.facebook.com/reel/871581022028885">https://www.facebook.com/reel/871581022028885</a></div><figcaption>Caso niño Kaleb. Lo interesante son los planos del primer minuto.</figcaption></figure><p id="3ceaf9de-19e7-802a-904b-d330e720356c-es" class="" dir="auto"><strong>Dr. Carrera — Composición casual y relajada en consultorio</strong></p><figure id="3ceaf9de-19e7-8049-8521-c114700bbc96-es" dir="ltr"><div class="source"><a href="https://www.facebook.com/reel/945014958129916">https://www.facebook.com/reel/945014958129916</a></div></figure><p id="3ceaf9de-19e7-80d7-8fdf-f2f8609f87e8-es" class="" dir="auto"><a href="https://www.facebook.com/reel/945014958129916">https://www.facebook.com/reel/945014958129916</a><br/>La composición de la imagen dentro de su consultorio es muy casual y relajada.</p><p id="3ceaf9de-19e7-800e-b124-ecd6ee7a852b-es" class="" dir="auto"><strong>Dr. Naranjo — Manejo de planos</strong></p><figure id="3ceaf9de-19e7-8029-9152-d5a1a47eb9c5-es" dir="ltr"><div class="source"><a href="https://www.facebook.com/reel/1836270720328406">https://www.facebook.com/reel/1836270720328406</a></div></figure><p id="3ceaf9de-19e7-80c5-a3a5-c6d8d0097cf1-es" class="" dir="auto">Dr. Naranjo. Ver manejo de planos.</p><hr id="3ceaf9de-19e7-80b2-ad42-ee659cb182ce-es" dir="auto"/><h1 id="3ceaf9de-19e7-8032-aa8c-c3331db8783b-es" class="" dir="auto">Cronista de la Ciudad (Juárez, México)</h1><figure id="3ceaf9de-19e7-8028-9754-ef4e84ca5350-es" class="image" data-notion-image="cronista-borunda4-1024x654.png" dir="ltr"><a href="cronista-borunda4-1024x654.png"><img style="width:768px" src="cronista-borunda4-1024x654.png"/></a></figure><p id="3ceaf9de-19e7-8012-bdd3-cf90f6ce58fc-es" class="" dir="auto">En la propuesta que se presentó en 2025 ante el <strong><a href="https://www.juarez.gob.mx/noticia/27616/regidores-seleccionan-la-terna-para-elegir-al-cronista-de-la-ciudad">Cabildo de Ciudad Juárez</a></strong> para ocupar el puesto de Cronista de la ciudad articulé, de manera poco convencional para el género, tres ejes que suelen tratarse por separado en la gestión del patrimonio local: la preservación archivística, la perspectiva de género y la incorporación de herramientas tecnológicas contemporáneas. Sí, inteligencia artificial. </p><div id="3ceaf9de-19e7-803d-be47-e817aea5b3b5-es" class="column-list" data-notion-column-list="" dir="auto"><div id="3ceaf9de-19e7-8087-ac07-e836e30402ab-es" style="width:50%" class="column" data-notion-column-ratio="0.5" dir="auto"><figure id="3ceaf9de-19e7-80a5-92fc-ca7b98d35f2f-es" class="image" style="text-align:left" data-notion-image="cronista-borunda3-1024x682.png" dir="ltr"><a href="cronista-borunda3-1024x682.png"><img style="width:336px" src="cronista-borunda3-1024x682.png"/></a></figure></div><div id="3ceaf9de-19e7-8005-a3b0-dfa67534ffe2-es" style="width:50%" class="column" data-notion-column-ratio="0.5" dir="auto"><figure id="3ceaf9de-19e7-8060-8c36-ea128e748de7-es" class="image" data-notion-image="cronista-borunda5-1024x682.png" dir="ltr"><a href="cronista-borunda5-1024x682.png"><img style="width:288px" src="cronista-borunda5-1024x682.png"/></a></figure></div></div><p id="3ceaf9de-19e7-8062-8e64-fc90477da292-es" class="" dir="auto">A diferencia de una visión tradicional del cronista como mero registrador de efemérides, mi proyecto proponía una figura activa que interviene en la construcción de la memoria institucional, particularmente al plantearse la integración sistemática de relatos femeninos –desde trabajadoras de maquila hasta activistas y académicas– dentro de una narrativa oficial que históricamente las ha marginado.</p><p id="3ceaf9de-19e7-8093-91fb-ea1092374bfb-es" class="" dir="auto">En la propuesta se hizo mención del uso de inteligencia artificial subordinándose explícitamente a tareas de apoyo técnico (transcripción, catalogación, análisis de patrones discursivos), reservando la interpretación y la sensibilidad narrativa al criterio humano, como mecanismo de reflexión frente a los riesgos de automatización que otros proyectos culturales suelen omitir.</p><p id="3ceaf9de-19e7-8063-8cd3-c5fcabd0b5f7-es" class="" dir="auto">
+</p><h3 id="3ceaf9de-19e7-801d-8fe7-ffe3e132bbce-es" class="" dir="auto">🛠️ HABILIDADES</h3><ul id="3ceaf9de-19e7-80dc-9cea-ff69103041ad-es" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>Idiomas: </strong>Español (Nativo) | Inglés C1 (Fluidez Profesional) .<br/></li></ul><ul id="3ceaf9de-19e7-80bc-92f3-d21440b0ba00-es" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>Marketing y Operaciones: </strong>Meta Business Suite, LinkedIn B2B, Google<br/>Analytics, Email Marketing (Newsletters), Encuestas y Formularios (Google<br/>Forms/Typeform) .<br/></li></ul><ul id="3ceaf9de-19e7-8038-8d4f-de9af9820d2b-es" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>Diseño y Edición: </strong>Adobe Photoshop, Adobe Lightroom, Photopea, CapCut,<br/>Clipchamp .<br/></li></ul><ul id="3ceaf9de-19e7-80d6-958b-f4cc7af73834-es" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>Sistemas y Plataformas: </strong>Microsoft Office, CMS (Drupal, Wordpress), Sistemas CRM<br/>(Zoho, Salesforce, WhatsHash), plataformas operativas de logística y entregas (Tookan).<br/></li></ul><ul id="3ceaf9de-19e7-804f-a2c4-d8795e1e73f8-es" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Flujos de trabajo asistidos por IA (Claude, ChatGPT, Gemini, Higgsfield, etc.)</li></ul><hr id="3ceaf9de-19e7-80a1-bed1-c0f1578500f5-es" dir="auto"/><h3 id="3ceaf9de-19e7-80dd-a6b7-e875b84362f8-es" class="" dir="auto">🎓 EDUCACIÓN</h3><ul id="3ceaf9de-19e7-80eb-8a74-ecab40055b16-es" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Maestría (inconclusa) en Estudios Latinoamericanos por la New Mexico State<br/>University, NMSU.<br/></li></ul><ul id="3ceaf9de-19e7-80e3-a39c-ce76b885cf0b-es" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Licenciatura en Lingüística y Literatura Hispánica por la Universidad Autónoma de<br/>Ciudad Juárez, UACJ.</li></ul><hr id="3ceaf9de-19e7-8025-b4c4-d34b6fc2e012-es" dir="auto"/><h3 id="3ceaf9de-19e7-80ab-be7b-f7e2a08bf199-es" class="" dir="auto">📬 CONTACTO</h3><ul id="3ceaf9de-19e7-8031-a162-fb22f6e344b5-es" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Celular: <a href="http://wa.me/+526566365827">+52 656 636 5827</a> (Enlace abre en WhatsApp)</li></ul><ul id="3ceaf9de-19e7-801d-9a73-c9d5966c110a-es" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>Correo:</strong> <a href="mailto:jcruzes@live.com">jcruzes@live.com</a></li></ul><ul id="3ceaf9de-19e7-80a8-b34c-cc4071023feb-es" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>LinkedIn:</strong> <a href="https://linkedin.com">Jorge Spinoza</a></li></ul><ul id="3ceaf9de-19e7-803f-96cc-ec3c000123e6-es" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Cédula profesional de Licenciatura: <a href="https://latamverify.com/profile/mx/pro/jorge-arturo-cruz-espinoza-3568958.html">6425611</a></li></ul><hr id="3ceaf9de-19e7-804d-96a8-c4a501646d20-es" dir="auto"/><p id="3ceaf9de-19e7-800c-9134-fc1f928f7b2e-es" class="" dir="auto">
+</p><p id="3ceaf9de-19e7-803e-8990-d2c390e45022-es" class="" dir="auto"><em>Hecho con Notion</em></p><p id="3ceaf9de-19e7-8018-bec2-c5cd5510c3cd-es" class="" dir="auto">
+</p></div>
+</div>
+
+</article>
+<span class="sans" style="font-size:14px;padding-top:2em"></span>
+
+<script>
+  var track = document.getElementById('track');
+  var btnEn = document.getElementById('btn-en');
+  var btnEs = document.getElementById('btn-es');
+  var blocks = document.querySelectorAll('.lang-block');
+
+  function setLang(lang) {
+    blocks.forEach(function(b) {
+      b.classList.toggle('is-active', b.getAttribute('data-lang') === lang);
+    });
+    track.classList.toggle('is-es', lang === 'es');
+    track.setAttribute('aria-checked', lang === 'es');
+    btnEn.setAttribute('aria-pressed', lang === 'en');
+    btnEs.setAttribute('aria-pressed', lang === 'es');
+  }
+
+  function toggleLang() {
+    var current = track.classList.contains('is-es') ? 'es' : 'en';
+    setLang(current === 'en' ? 'es' : 'en');
+  }
+
+  track.addEventListener('click', toggleLang);
+  track.addEventListener('keydown', function(e) {
+    if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggleLang(); }
+  });
+  btnEn.addEventListener('click', function() { setLang('en'); });
+  btnEs.addEventListener('click', function() { setLang('es'); });
+
+  // Default: English
+  setLang('en');
+</script>
+</body></html>
