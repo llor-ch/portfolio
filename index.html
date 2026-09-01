@@ -1,5 +1,112 @@
 <html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Jorge Spinoza - Portfolio ENG</title><meta name="data-notion-page-icon" content="🌐"/><link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20100%20100%22%3E%3Ctext%20y%3D%22.9em%22%20font-size%3D%2290%22%3E%F0%9F%8C%90%3C%2Ftext%3E%3C%2Fsvg%3E"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/charter-webfont@4/charter.min.css"/><style>
 /* cspell:disable-file */
+
+/* ===== Aurora Mesh + Grain background ===== */
+.bg-wrapper {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	background-color: #f5ffdb;
+	overflow: hidden;
+	z-index: -2;
+}
+
+.noise-overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	pointer-events: none;
+	z-index: -1;
+	opacity: 0.22;
+	mix-blend-mode: overlay;
+}
+
+.blob {
+	position: absolute;
+	border-radius: 50%;
+	filter: blur(90px);
+	will-change: transform;
+}
+
+.blob-1 {
+	top: -10%;
+	left: -10%;
+	width: 55vw;
+	height: 55vw;
+	background: #b5caef;
+	opacity: 0.28;
+	animation: moveBlob1 20s ease-in-out infinite alternate;
+}
+
+.blob-2 {
+	bottom: -15%;
+	right: -10%;
+	width: 60vw;
+	height: 60vw;
+	background: #4094b1;
+	opacity: 0.22;
+	animation: moveBlob2 24s ease-in-out infinite alternate;
+}
+
+.blob-3 {
+	top: 25%;
+	right: 15%;
+	width: 45vw;
+	height: 45vw;
+	background: #ffee00;
+	opacity: 0.16;
+	animation: moveBlob3 18s ease-in-out infinite alternate;
+}
+
+.blob-4 {
+	bottom: 10%;
+	left: 15%;
+	width: 40vw;
+	height: 40vw;
+	background: #9c7f54;
+	opacity: 0.14;
+	animation: moveBlob4 22s ease-in-out infinite alternate;
+}
+
+.blob-5 {
+	top: 40%;
+	left: 35%;
+	width: 35vw;
+	height: 35vw;
+	background: #ffffff;
+	opacity: 0.45;
+	animation: moveBlob1 15s ease-in-out infinite alternate-reverse;
+}
+
+@keyframes moveBlob1 {
+	0% { transform: translate(0, 0) scale(1); }
+	50% { transform: translate(25%, 15%) scale(1.15); }
+	100% { transform: translate(-10%, 30%) scale(0.9); }
+}
+
+@keyframes moveBlob2 {
+	0% { transform: translate(0, 0) scale(1); }
+	50% { transform: translate(-20%, -25%) scale(1.1); }
+	100% { transform: translate(15%, -10%) scale(0.95); }
+}
+
+@keyframes moveBlob3 {
+	0% { transform: translate(0, 0) scale(1); }
+	50% { transform: translate(-25%, 20%) scale(1.25); }
+	100% { transform: translate(20%, -15%) scale(0.85); }
+}
+
+@keyframes moveBlob4 {
+	0% { transform: translate(0, 0) scale(1); }
+	50% { transform: translate(20%, -20%) scale(1.2); }
+	100% { transform: translate(-15%, 15%) scale(0.9); }
+}
+/* ===== Fin Aurora Mesh + Grain ===== */
+
 /* webkit printing magic: print all background colors */
 html {
 	-webkit-print-color-adjust: exact;
@@ -13,7 +120,7 @@ html,
 body {
 	margin: 0;
 	padding: 0;
-	background-color: #f5ffdb;
+	background-color: transparent;
 }
 @media only screen {
 	body {
@@ -814,7 +921,24 @@ blockquote.quote-large {
 	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
 }
 	
-</style><style>@import url('https://cdn.jsdelivr.net/npm/katex@0.16.25/dist/katex-swap.min.css')</style></head><body><article id="3ceaf9de-19e7-8007-8687-d6a5dc1cc3e3" class="page sans" data-notion-page-icon="🌐"><header><img class="page-cover-image" src="CJS-CUN-24.png" style="object-position:center 92.75%"/><div class="page-header-icon page-header-icon-with-cover"><span class="icon" data-emoji="🌐"></span></div><h1 class="page-title" dir="auto">Jorge Spinoza - Portfolio</h1><p class="page-description" dir="auto"></p></header><div class="page-body"><p id="3ceaf9de-19e7-8037-b178-dbafbaa34ea8" class="" dir="auto">
+</style><style>@import url('https://cdn.jsdelivr.net/npm/katex@0.16.25/dist/katex-swap.min.css')</style></head><body>
+<div class="bg-wrapper">
+  <div class="blob blob-1"></div>
+  <div class="blob blob-2"></div>
+  <div class="blob blob-3"></div>
+  <div class="blob blob-4"></div>
+  <div class="blob blob-5"></div>
+</div>
+<svg class="noise-overlay" xmlns="http://www.w3.org/2000/svg">
+  <filter id="noiseFilter">
+    <feTurbulence
+      type="fractalNoise"
+      baseFrequency="0.8"
+      numOctaves="3"
+      stitchTiles="stitch" />
+  </filter>
+  <rect width="100%" height="100%" filter="url(#noiseFilter)" />
+</svg><article id="3ceaf9de-19e7-8007-8687-d6a5dc1cc3e3" class="page sans" data-notion-page-icon="🌐"><header><img class="page-cover-image" src="CJS-CUN-24.png" style="object-position:center 92.75%"/><div class="page-header-icon page-header-icon-with-cover"><span class="icon" data-emoji="🌐"></span></div><h1 class="page-title" dir="auto">Jorge Spinoza - Portfolio</h1><p class="page-description" dir="auto"></p></header><div class="page-body"><p id="3ceaf9de-19e7-8037-b178-dbafbaa34ea8" class="" dir="auto">
 </p><figure id="3ceaf9de-19e7-8012-8e04-e3eeb509a396" class="image" data-notion-image="upscaled_(1).png" dir="ltr"><a href="upscaled_(1).png"><img style="width:912px" src="upscaled_(1).png"/></a></figure><h3 id="3ceaf9de-19e7-80f0-8160-c4819bd9885a" class="" dir="auto"><strong>I transform language into a business tool.</strong></h3><p id="3ceaf9de-19e7-8086-a54e-c591a4a36795" class="" dir="auto">I combine a background in linguistics and editorial experience with digital commerce and applied artificial intelligence, <em>i.e.</em> prompt engineering, conversational systems, and human-in-the-loop models to create content, scripts, and communication strategies that not only read well, but also drive results: more sales, greater clarity, and stronger connections with the right audience.</p><p id="3ceaf9de-19e7-8011-bcc4-e149948376a3" class="" dir="auto">I create videos, content, and design.</p><p id="3ceaf9de-19e7-8043-b11f-fc8d3caf65b7" class="" dir="auto">My career bridges three worlds that are usually separate:</p><p id="3ceaf9de-19e7-8081-816f-d6a31bea8582" class="" dir="auto"><strong>Editorial</strong> — As a digital editor at <em>diario.mx</em>, I learned to think in terms of real audiences: which stories matter, how they are told, and what keeps someone reading until the end.</p><p id="3ceaf9de-19e7-80ca-a855-db165b0ea2ef" class="" dir="auto"><strong>Commercial</strong> — At Taco H, I didn't stop at answering WhatsApp messages: I built a digital sales business unit from scratch, translating conversation into conversion and proving that well-applied language also sells.</p><p id="3ceaf9de-19e7-80bd-a819-ceaf80e63be6" class="" dir="auto"><strong>Strategic</strong> — At IRTCáncer, as a public relations and communications assistant, I was in charge of marketing content, closing the loop between institutional narrative, reputation, and measurable results.</p><hr id="3ceaf9de-19e7-80a7-b1a5-f7ce137e6785" dir="auto"/><p id="3ceaf9de-19e7-808a-9948-e9bf507cf70a" class="" dir="auto">
 </p><h1 id="3ceaf9de-19e7-8056-a577-e1c34498e347" class="" dir="auto">💼 Projects</h1><hr id="3ceaf9de-19e7-80f2-9e36-db2d2dae2ab6" dir="auto"/><p id="3ceaf9de-19e7-808c-83cf-c47df1ba57ee" class="" dir="auto">
 </p><h2 id="3ceaf9de-19e7-804b-8230-ef2bffb03811" class="" dir="auto">– Diario.mx –</h2><figure id="3ceaf9de-19e7-802c-b027-c1f43a6a19d3" class="image" data-notion-image="diario002.jpg" dir="ltr"><a href="diario002.jpg"><img style="width:768px" src="diario002.jpg"/></a></figure><p id="3ceaf9de-19e7-80a1-89d9-d37fda32baf4" class="" dir="auto">During this period, I contributed to growing the digital audience of <a href="http://diario.mx">diario.mx</a> from 250,000 to 500,000 followers between 2014 and 2018, doubling reach through a planned strategy and content experimentation, while directing front-page editorial decisions for the region's leading news outlet, setting the daily community agenda, and defining the visual and narrative hierarchy across digital formats; this work also included brand reputation management during high-volatility news cycles, maintaining audience trust in sensitive situations, and coordinating international content workflows under The New York Times editorial standards, ensuring intercultural accuracy and professional publishing quality.</p><figure id="3ceaf9de-19e7-80cd-af3d-de59c0d846b8" class="image" data-notion-image="image.png" dir="ltr"><a href="image.png"><img style="width:703.96875px" src="image.png"/></a></figure><p id="3ceaf9de-19e7-803b-aea8-d4b444042620" class="" dir="auto">A small sample of my viral articles (which I used to sign in the 2010s when it was uncommon) can be found <strong><a href="https://gluc.mx/buscar?q=%22Jorge%20Spinoza">on the gluc.mx portal</a></strong>.</p><p id="3ceaf9de-19e7-8019-bc70-c4bef6ff2400" class="" dir="auto">
