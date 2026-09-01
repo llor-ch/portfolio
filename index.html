@@ -13,6 +13,7 @@ html,
 body {
 	margin: 0;
 	padding: 0;
+	background-color: #f5ffdb;
 }
 @media only screen {
 	body {
@@ -20,6 +21,20 @@ body {
 		max-width: 900px;
 		color: rgb(55, 53, 47);
 	}
+}
+
+@keyframes page-reveal {
+	from {
+		filter: blur(14px);
+		opacity: 0.3;
+	}
+	to {
+		filter: blur(0px);
+		opacity: 1;
+	}
+}
+article.page {
+	animation: page-reveal 1.5s ease-out forwards;
 }
 
 body {
